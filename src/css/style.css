@@ -17,3 +17,32 @@ html {
 body {
 	background-color: #f5f5f5;
 }
+
+:root {
+	--primary-color: #cc312d;
+	--secondary-color: #e5303f1a;
+	--text-color: #1a1814;
+	--background-color: #f7f7f7;
+	--border-color: #ebebeb;
+}
+
+.container {
+	margin: 5px auto;
+	padding: 0 15px;
+	max-width: 1440px;
+	min-width: 320px;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid {
+	display: grid;
+}
