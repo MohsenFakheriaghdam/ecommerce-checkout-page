@@ -277,9 +277,170 @@ html {
 
 /*!__________________________ checkout-summary _____________________________________ */
 
+.checkout-summary {
+	gap: 20px;
+	padding: 24px;
+	display: grid;
+	border-radius: 16px;
+	grid-template-columns: 1fr;
+	background-color: #f7f7f7;
+	grid-template-rows: auto auto 1fr auto;
+}
+
+.checkout-summary__body {
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.checkout-summary__header h3 {
+	font-weight: 700;
+	font-size: 1.8rem;
+	color: var(--text-color);
+}
+
+.checkout-summary__item-image {
+	width: 90px;
+	height: 90px;
+	padding: 15px;
+	border-radius: 12px;
+	background-color: #fff;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkout-summary__item {
+	gap: 8px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.checkout-summary__item :last-child {
+	width: 100%;
+}
+
+.checkout-summary__item-info {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+.checkout-summary__item-title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.checkout-summary__item-title span {
+	font-size: 1.4rem;
+}
+.checkout-summary__item-price {
+	flex-shrink: 1;
+}
+
+.checkout-summary__item-price span {
+	font-size: 1.4rem;
+}
+
+.checkout-summary__item-price-action {
+	margin-top: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.checkout-summary__item-actions {
+	gap: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.checkout-summary__qty-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	padding: 8px;
+	border-radius: 40px;
+	width: 35px !important;
+	height: 35px;
+}
+
+.checkout-summary__qty-btn--counter {
+	border: 1.5px solid #e6e6e6;
+	background-color: var(--background-color);
+}
+
+.checkout-summary__item-spec {
+	width: 51px;
+	font-size: 1.1rem;
+}
+.checkout-summary__footer {
+	padding: 18px 16px;
+	border-radius: 12px;
+	background-color: #fff;
+}
+
+.checkout-summary__footer .line {
+	margin: 10px 0;
+}
+.checkout-summary__footer-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.checkout-summary__footer-label {
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.checkout-summary__footer-value {
+	font-size: 1.6rem;
+	color: #14141466;
+}
+
+.checkout-summary__footer-row--total .checkout-summary__footer-value {
+	color: #1a1814;
+	font-weight: bold;
+}
+
+.checkout-summary__footer-gateway {
+	gap: 8px;
+	padding: 16px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.checkout-summary__footer-gateway span {
+	background-color: #ebb81140;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.checkout-summary__footer-gateway p {
+	font-size: 1.2rem;
+}
+
+.checkout-summary__pay-btn {
+	width: 100%;
+	padding: 9px 0;
+	border: none;
+	border-radius: 44px;
+	color: white;
+	font-weight: 600;
+	background-color: var(--primary-color);
+}
+
 /* Medai Screen */
 @media screen and (min-width: 768px) {
 	.checkout {
+		gap: 10px;
 		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 1fr;
 	}
