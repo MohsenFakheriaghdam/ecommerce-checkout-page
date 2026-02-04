@@ -14,9 +14,9 @@ html {
 	font-size: 62.5%;
 }
 
-body {
+/* body {
 	background-color: #f5f5f5;
-}
+} */
 
 :root {
 	--primary-color: #cc312d;
@@ -48,21 +48,31 @@ body {
 	display: grid;
 }
 
-/* _______ Checkout ________ */
+.line {
+	border: 1px solid var(--border-color);
+}
+
+/* _______ checkout ________ */
 
 .checkout {
-	height: inherit;
 	display: grid;
+	height: inherit;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto;
+
+	padding: 20px 10px;
+	border-radius: 20px;
+	border: 1.5px solid var(--border-color);
 }
 
-.checkout-details {
-	background-color: #a0a0a0;
-}
+/* _______ checkout-details ________ */
 
-.checkout-summary {
-	background-color: #3d7f90;
+/* _______ header ________ */
+
+.checkout-details__title {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: var(--text-color);
 }
 
 /* Medai Screen */
