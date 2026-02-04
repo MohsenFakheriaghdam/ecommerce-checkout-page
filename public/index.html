@@ -28,22 +28,21 @@
 					<div class="line"></div>
 
 					<div class="checkout-details__body">
-						<section class="delivery-info">
+						<section class="delivery-info grid">
 							<!-- Recipient Info -->
 							<section class="recipient-info">
 								<header class="recipient-info__header">
 									<h2 class="recipient-info__title">اطلاعات تحویل گیرنده</h2>
 								</header>
-
 								<div class="recipient-info__body">
 									<form class="recipient-info__form">
 										<div>
-											<label for="recipient-name" class="recipient-name"> نام و نام خانوادگی </label>
+											<label for="recipient-name" class="recipient-name form-label"> نام و نام خانوادگی </label>
 											<input type="text" id="recipient-name" name="recipient-name" class="form-input" placeholder="محسن فاخری اقدم" />
 										</div>
 
 										<div>
-											<label for="recipient-phone" class="recipient-phone"> شماره تماس گیرنده </label>
+											<label for="recipient-phone" class="recipient-phone form-label"> شماره تماس گیرنده </label>
 											<input type="tel" id="recipient-phone" name="recipient-phone" class="form-input" placeholder="09121000000" />
 										</div>
 									</form>
@@ -56,7 +55,7 @@
 									<h2 class="delivery-address__title">آدرس تحویل</h2>
 
 									<div class="delivery-address__actions">
-										<button class="delivery-address__action-btn" type="button">
+										<a class="delivery-address__action-btn flex" href="#">
 											<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
 												<path
 													d="M0.75 5.75H5.75M5.75 5.75H10.75M5.75 5.75V10.75M5.75 5.75V0.75"
@@ -67,38 +66,54 @@
 												/>
 											</svg>
 											<span>انتخاب آدرس</span>
-										</button>
+										</a>
 									</div>
 								</header>
 
 								<div class="delivery-address__body">
 									<form class="delivery-address__form">
-										<label for="province">استان</label>
-										<select id="province" name="province" required>
-											<option value="" disabled selected>انتخاب استان</option>
-											<option value="tehran">تهران</option>
-											<option value="east-azerbaijan">آذربایجان شرقی</option>
-											<option value="west-azerbaijan">آذربایجان غربی</option>
-											<option value="ardabil">اردبیل</option>
-										</select>
-
-										<label for="city">شهر</label>
-										<select id="city" name="city" required>
-											<option value="" disabled selected>انتخاب شهر</option>
-											<option value="tehran">تهران</option>
-											<option value="arak">اراک</option>
-											<option value="abadan">آبادان</option>
-											<option value="mashhad">مشهد</option>
-										</select>
-
-										<label for="building-number">پلاک</label>
-										<input type="text" id="building-number" name="building-number" inputmode="numeric" />
-
-										<label for="postal-code">کد پستی</label>
-										<input type="text" id="postal-code" name="postal-code" />
-
-										<label for="additional-info">نشانی پستی</label>
-										<textarea id="additional-info" name="additional-info"></textarea>
+										<!-- province -->
+										<div>
+											<label for="province" class="form-label">استان</label>
+											<select id="province" name="province" required class="form-option">
+												<option value="" disabled selected>انتخاب استان</option>
+												<option value="tehran">تهران</option>
+												<option value="east-azerbaijan">آذربایجان شرقی</option>
+												<option value="west-azerbaijan">آذربایجان غربی</option>
+												<option value="ardabil">اردبیل</option>
+											</select>
+										</div>
+										<!-- city -->
+										<div>
+											<label for="city" class="form-label">شهر</label>
+											<select id="city" name="city" required class="form-option">
+												<option value="" disabled selected>انتخاب شهر</option>
+												<option value="tehran">تهران</option>
+												<option value="arak">اراک</option>
+												<option value="abadan">آبادان</option>
+												<option value="mashhad">مشهد</option>
+											</select>
+										</div>
+										<!-- building-number -->
+										<div>
+											<label for="building-number" class="form-label">پلاک</label>
+											<input class="form-input" type="text" id="building-number" name="building-number" inputmode="numeric" placeholder="411" />
+										</div>
+										<!-- postal-code -->
+										<div>
+											<label for="postal-code" class="form-label">کد پستی</label>
+											<input class="form-input" type="text" id="postal-code" name="postal-code" placeholder="5551685678" />
+										</div>
+										<!-- additional-info -->
+										<div>
+											<label for="additional-info" class="form-label">نشانی پستی</label>
+											<textarea
+												id="additional-info"
+												name="additional-info"
+												class="text-input"
+												placeholder=" تهران، خیابان ولیعصر، منطقه ۱۲، بلوار کاوه، کوچه ابوذر، پلاک ۱۵"
+											></textarea>
+										</div>
 									</form>
 								</div>
 							</section>
@@ -109,29 +124,33 @@
 					<footer class="checkout-details__footer">
 						<header class="checkout-details__footer-header">
 							<h2 class="checkout-details__footer-title">انتخاب نحوه ارسال</h2>
-							<button class="checkout-details__footer-cta" type="button">ادامه فرایند خرید</button>
+							<div class="checkout-details__footer-cta">
+								<span>3 محصول در سبد خرید</span>
+							</div>
 						</header>
 
 						<div class="line"></div>
 
 						<section class="checkout-details__footer-content">
-							<fieldset class="delivery-options">
-								<legend class="delivery-options__legend">روش ارسال</legend>
+							<div class="delivery-options">
+								<legend class="delivery-options__legend form-label">روش ارسال</legend>
 
-								<label class="delivery-options__item delivery-options__item--insured" for="delivery-insured">
-									<input type="radio" id="delivery-insured" name="delivery" value="insured" />
-									<span class="delivery-options__title">تپیکس با بیمه</span>
-									<span class="delivery-options__time">تا ۳ روز کاری</span>
-									<span class="delivery-options__price">۴۵,۰۰۰ تومان</span>
-								</label>
+								<div class="delivery-options__items">
+									<div class="delivery-options__item delivery-options__item--insured" for="delivery-insured">
+										<input type="radio" id="delivery-insured" name="delivery" value="insured" />
+										<span class="delivery-options__title">تپیکس با بیمه</span>
+										<span class="delivery-options__time">تا ۳ روز کاری</span>
+										<span class="delivery-options__price">۴۵,۰۰۰ تومان</span>
+									</div>
 
-								<label class="delivery-options__item delivery-options__item--express" for="delivery-express">
-									<input type="radio" id="delivery-express" name="delivery" value="express" />
-									<span class="delivery-options__title">پست پیشتاز</span>
-									<span class="delivery-options__time">تا ۵ روز کاری</span>
-									<span class="delivery-options__price">۸۰,۰۰۰ تومان</span>
-								</label>
-							</fieldset>
+									<div class="delivery-options__item delivery-options__item--express" for="delivery-express">
+										<input type="radio" id="delivery-express" name="delivery" value="express" />
+										<span class="delivery-options__title">پست پیشتاز</span>
+										<span class="delivery-options__time">تا ۵ روز کاری</span>
+										<span class="delivery-options__price">۸۰,۰۰۰ تومان</span>
+									</div>
+								</div>
+							</div>
 						</section>
 					</footer>
 				</div>
