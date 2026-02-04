@@ -1,11 +1,210 @@
 <!doctype html>
-<html lang="en" dir="rtl">
+<html lang="fa" dir="rtl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+		<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="/src/css/style.css" />
 		<title>Checkout Page</title>
 	</head>
-	<body></body>
+
+	<body>
+		<div class="container">
+			<main class="checkout">
+				<!-- Checkout Details -->
+				<section class="checkout-details">
+					<!-- Header -->
+					<header class="checkout-details__header">
+						<h2 class="checkout-details__title">اطلاعات کاربری شما</h2>
+					</header>
+
+					<div class="checkout-details__body">
+						<section class="delivery-info">
+							<!-- Recipient Info -->
+							<section class="recipient-info">
+								<header class="recipient-info__header">
+									<h2 class="recipient-info__title">اطلاعات تحویل گیرنده</h2>
+								</header>
+
+								<div class="recipient-info__body">
+									<form class="recipient-info__form">
+										<label for="recipient-name">نام و نام خانوادگی</label>
+										<input type="text" id="recipient-name" name="recipient-name" />
+
+										<label for="recipient-phone">شماره تماس گیرنده</label>
+										<input type="tel" id="recipient-phone" name="recipient-phone" />
+									</form>
+								</div>
+							</section>
+
+							<!-- Delivery Address -->
+							<section class="delivery-address">
+								<header class="delivery-address__header">
+									<h2 class="delivery-address__title">آدرس تحویل</h2>
+
+									<div class="delivery-address__actions">
+										<button class="delivery-address__action-btn" type="button">
+											<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+												<path
+													d="M0.75 5.75H5.75M5.75 5.75H10.75M5.75 5.75V10.75M5.75 5.75V0.75"
+													stroke="#CC312D"
+													stroke-width="1.5"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+											<span>انتخاب آدرس</span>
+										</button>
+									</div>
+								</header>
+
+								<div class="delivery-address__body">
+									<form class="delivery-address__form">
+										<label for="province">استان</label>
+										<select id="province" name="province" required>
+											<option value="" disabled selected>انتخاب استان</option>
+											<option value="tehran">تهران</option>
+											<option value="east-azerbaijan">آذربایجان شرقی</option>
+											<option value="west-azerbaijan">آذربایجان غربی</option>
+											<option value="ardabil">اردبیل</option>
+										</select>
+
+										<label for="city">شهر</label>
+										<select id="city" name="city" required>
+											<option value="" disabled selected>انتخاب شهر</option>
+											<option value="tehran">تهران</option>
+											<option value="arak">اراک</option>
+											<option value="abadan">آبادان</option>
+											<option value="mashhad">مشهد</option>
+										</select>
+
+										<label for="building-number">پلاک</label>
+										<input type="text" id="building-number" name="building-number" inputmode="numeric" />
+
+										<label for="postal-code">کد پستی</label>
+										<input type="text" id="postal-code" name="postal-code" />
+
+										<label for="additional-info">نشانی پستی</label>
+										<textarea id="additional-info" name="additional-info"></textarea>
+									</form>
+								</div>
+							</section>
+						</section>
+					</div>
+
+					<!-- Footer -->
+					<footer class="checkout-details__footer">
+						<header class="checkout-details__footer-header">
+							<h2 class="checkout-details__footer-title">انتخاب نحوه ارسال</h2>
+							<button class="checkout-details__footer-cta" type="button">ادامه فرایند خرید</button>
+						</header>
+
+						<div class="line"></div>
+
+						<section class="checkout-details__footer-content">
+							<fieldset class="delivery-options">
+								<legend class="delivery-options__legend">روش ارسال</legend>
+
+								<label class="delivery-options__item delivery-options__item--insured" for="delivery-insured">
+									<input type="radio" id="delivery-insured" name="delivery" value="insured" />
+									<span class="delivery-options__title">تپیکس با بیمه</span>
+									<span class="delivery-options__time">تا ۳ روز کاری</span>
+									<span class="delivery-options__price">۴۵,۰۰۰ تومان</span>
+								</label>
+
+								<label class="delivery-options__item delivery-options__item--express" for="delivery-express">
+									<input type="radio" id="delivery-express" name="delivery" value="express" />
+									<span class="delivery-options__title">پست پیشتاز</span>
+									<span class="delivery-options__time">تا ۵ روز کاری</span>
+									<span class="delivery-options__price">۸۰,۰۰۰ تومان</span>
+								</label>
+							</fieldset>
+						</section>
+					</footer>
+				</section>
+
+				<!-- Checkout Summary -->
+				<section class="checkout-summary">
+					<header class="checkout-summary__header"></header>
+					<div class="checkout-summary__body">
+						<div class="checkout-summary__item">
+							<div class="checkout-summary__item-image"></div>
+							<div class="checkout-summary__item-info">
+								<div class="checkout-summary__item-spec">
+									<span>100 میل</span>
+								</div>
+								<div class="checkout-summary__item-title">
+									<span> Hugo Just Different </span>
+									<span> هوگو بوس جاست دیفرنت </span>
+								</div>
+							</div>
+
+							<div class="checkout-summary__item-price-action">
+								<div class="checkout-summary__item-price">
+									<span>1,550,000 تومان</span>
+								</div>
+								<div class="checkout-summary__item-actions">
+									<button class="checkout-summary__qty-btn checkout-summary__qty-btn--plus">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</button>
+									<button class="checkout-summary__qty-btn checkout-summary__qty-btn--minus">
+										<i class="fa-solid fa-minus"></i>
+									</button>
+									<button class="checkout-summary__remove-btn">
+										<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M8.54182 0C7.16619 0 5.93149 0.901026 5.53369 2.22704L5.51645 2.28449C4.19809 2.43154 2.88783 2.675 1.59627 3.01488L0.466095 3.3123C0.132282 3.40014 -0.0671137 3.74197 0.0207317 4.07578C0.108577 4.40959 0.450399 4.60899 0.784212 4.52114L1.91439 4.22373C6.25872 3.08048 10.8249 3.08048 15.1692 4.22373L16.2994 4.52114C16.6332 4.60899 16.9751 4.40959 17.0629 4.07578C17.1508 3.74197 16.9514 3.40014 16.6175 3.3123L15.4874 3.01488C14.1958 2.675 12.8855 2.43154 11.5672 2.28449L11.55 2.22704C11.1521 0.901026 9.91745 0 8.54182 0ZM10.1658 2.16465C9.83074 1.60903 9.21601 1.25 8.54182 1.25C7.86763 1.25 7.2529 1.60903 6.91783 2.16465C7.99952 2.10017 9.08412 2.10017 10.1658 2.16465Z"
+												fill="#CC312D"
+											/>
+											<path
+												d="M1.79744 4.96335C2.13994 4.92043 2.45238 5.16328 2.4953 5.50578L3.60986 14.4C3.72741 15.338 4.52493 16.0418 5.47031 16.0418H11.6133C12.5587 16.0418 13.3562 15.338 13.4738 14.4L14.5883 5.50578C14.6313 5.16328 14.9437 4.92043 15.2862 4.96335C15.6287 5.00627 15.8716 5.31871 15.8286 5.66121L14.7141 14.5554C14.5182 16.1188 13.189 17.2918 11.6133 17.2918H5.47031C3.89467 17.2918 2.56548 16.1188 2.36956 14.5554L1.255 5.66121C1.21208 5.31871 1.45494 5.00627 1.79744 4.96335Z"
+												fill="#CC312D"
+											/>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<!-- Action btns -->
+						</div>
+					</div>
+					<footer class="checkout-summary__footer">
+						<div class="checkout-summary__footer-row checkout-summary__footer-row--subtotal">
+							<span class="checkout-summary__footer-label">خرید شما:</span>
+							<span class="checkout-summary__footer-value">۱,۴۵۰,۰۰۰ تومان</span>
+						</div>
+
+						<div class="checkout-summary__footer-row checkout-summary__footer-row--shipping">
+							<span class="checkout-summary__footer-label">هزینه ارسال:</span>
+							<span class="checkout-summary__footer-value">۰ تومان</span>
+						</div>
+
+						<div class="checkout-summary__footer-row checkout-summary__footer-row--total">
+							<span class="checkout-summary__footer-label">مبلغ قابل پرداخت:</span>
+							<span class="checkout-summary__footer-value">۸,۴۵۰,۰۰۰ تومان</span>
+						</div>
+
+						<div class="checkout-summary__footer-gateway">
+							<p>پرداخت امن با کارت‌های عضو شتاب از طریق درگاه زیبال</p>
+						</div>
+
+						<button class="checkout-summary__pay-btn">
+							<p>پرداخت و خرید محصول</p>
+						</button>
+					</footer>
+				</section>
+			</main>
+		</div>
+	</body>
 </html>

@@ -31,10 +31,11 @@ body {
 	padding: 0 15px;
 	max-width: 1440px;
 	min-width: 320px;
+	height: 100vh;
 
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
+	grid-template-rows: repeat(2, 1fr);
 }
 
 .flex {
@@ -45,4 +46,12 @@ body {
 
 .grid {
 	display: grid;
+}
+
+/* Medai Screen */
+@media screen and (min-width: 768px) {
+	.container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
 }
