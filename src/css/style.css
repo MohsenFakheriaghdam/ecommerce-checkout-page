@@ -250,7 +250,7 @@ html {
 	gap: 10px;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto 1fr 1fr;
+	grid-template-rows: auto 1fr;
 }
 
 .delivery-options__item {
@@ -275,6 +275,8 @@ html {
 	margin-right: auto;
 }
 
+/*!__________________________ checkout-summary _____________________________________ */
+
 /* Medai Screen */
 @media screen and (min-width: 768px) {
 	.checkout {
@@ -288,7 +290,7 @@ html {
 
 @media screen and (max-width: 768px) {
 	.checkout {
-		gap: 30px;
+		gap: 20px;
 	}
 }
 
