@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-	margin: 5px auto;
+	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1440px;
 	min-width: 320px;
@@ -35,7 +35,7 @@ body {
 
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: 1fr;
 }
 
 .flex {
@@ -48,10 +48,27 @@ body {
 	display: grid;
 }
 
+/* _______ Checkout ________ */
+
+.checkout {
+	height: inherit;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+}
+
+.checkout-details {
+	background-color: #a0a0a0;
+}
+
+.checkout-summary {
+	background-color: #3d7f90;
+}
+
 /* Medai Screen */
 @media screen and (min-width: 768px) {
-	.container {
-		grid-template-columns: 1fr 1fr;
+	.checkout {
+		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 1fr;
 	}
 }
